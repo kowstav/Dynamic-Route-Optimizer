@@ -1,0 +1,6 @@
+{
+  "cpp_engine_path": "cpp_engine/build/dynamic_route_optimizer",
+  "default_graph_data": "data/sample_graph.json",
+  "api_host": "127.0.0.1",
+  "api_port": 8000
+}

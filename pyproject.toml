@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-route-optimizer-backend"
+version = "0.1.0"
+description = "Backend for the Dynamic Route Optimizer project."
+readme = "README.md" # Assuming you might move parts of the main README here for the backend package
+requires-python = ">=3.8"
+# Dependencies are listed in backend/requirements.txt
+# If you were to publish this as a package, you'd list them here too.
+# For local projects, requirements.txt is often sufficient.
+# classifiers = [
+#     "Programming Language :: Python :: 3",
+#     "License :: OSI Approved :: MIT License", # Choose your license
+#     "Operating System :: OS Independent",
+# ]
+
+# [project.urls] # Optional: if you had a homepage or bug tracker
+# "Homepage" = "https://example.com"
+# "Bug Tracker" = "https://example.com/issues"
+
+# Optional: if you want to define console scripts for your backend package
+# [project.scripts]
+# dro-backend = "backend.api.main:run_server_programmatically" # Example if main had such a func

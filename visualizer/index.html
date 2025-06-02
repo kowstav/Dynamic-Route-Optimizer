@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Route Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Route Optimizer Visualizer</h1>
+
+    <div class="controls">
+        <fieldset>
+            <legend>Graph Actions</legend>
+            <button id="loadGraphBtn">Load/Refresh Graph</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Shortest Path (Dijkstra)</legend>
+            <label for="startNode">Start Node:</label>
+            <input type="number" id="startNode" name="startNode" value="1">
+            <label for="endNode">End Node:</label>
+            <input type="number" id="endNode" name="endNode" value="5">
+            <button id="findPathBtn">Find Path</button>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Shortest Path (A*)</legend>
+            <label for="startNodeAstar">Start Node:</label>
+            <input type="number" id="startNodeAstar" name="startNodeAstar" value="1">
+            <label for="endNodeAstar">End Node:</label>
+            <input type="number" id="endNodeAstar" name="endNodeAstar" value="5">
+            <button id="findPathAstarBtn">Find A* Path</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Modify Graph</legend>
+            <p>Node Actions (Drag to move, Click to select for edge operations)</p>
+            <div>
+                ID: <input type="number" id="nodeIdAdd" placeholder="Node ID">
+                X: <input type="number" id="nodeXAdd" placeholder="X pos">
+                Y: <input type="number" id="nodeYAdd" placeholder="Y pos">
+                <button id="addNodeBtn">Add Node</button>
+            </div>
+            <hr>
+            <div>
+                From: <input type="number" id="edgeFrom" placeholder="From Node ID" readonly>
+                To: <input type="number" id="edgeTo" placeholder="To Node ID" readonly>
+                Weight: <input type="number" id="edgeWeight" placeholder="Weight" value="1.0">
+                <button id="addEdgeBtn">Add Edge</button>
+            </div>
+             <hr>
+            <div>
+                Edge to Update: From <input type="number" id="updateEdgeFrom" placeholder="Node ID">
+                To <input type="number" id="updateEdgeTo" placeholder="Node ID">
+                New Weight: <input type="number" id="updateEdgeWeightVal" placeholder="New Weight">
+                <button id="updateEdgeWeightBtn">Update Edge Weight</button>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Zone Operations (Union-Find)</legend>
+             <div>
+                Node ID: <input type="number" id="findSetNodeId" placeholder="Node ID">
+                <button id="findSetBtn">Find Set</button>
+                <span id="findSetResult"></span>
+            </div>
+            <hr>
+            <div>
+                Node ID 1: <input type="number" id="uniteNodeId1" placeholder="Node ID 1">
+                Node ID 2: <input type="number" id="uniteNodeId2" placeholder="Node ID 2">
+                <button id="uniteSetsBtn">Unite Sets</button>
+            </div>
+        </fieldset>
+
+        <div id="messageArea"></div>
+    </div>
+
+    <div id="graphContainer">
+        <svg id="graphSvg"></svg>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
