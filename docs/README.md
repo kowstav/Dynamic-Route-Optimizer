@@ -30,7 +30,16 @@ This project implements a dynamic route optimization system featuring a C++ grap
 
 ## Project Structure
 
-```bash dynamic-route-optimizer/ ├── backend/ # FastAPI application ├── cpp_engine/ # C++ graph engine ├── visualizer/ # HTML, CSS, JavaScript frontend ├── data/ # Sample graph data and configuration ├── docs/ # Project documentation (this file) ├── run.sh # Script to build C++ and run backend └── pyproject.toml # Python project configuration ``` 
+```
+dynamic-route-optimizer/
+├── backend/           # FastAPI application
+├── cpp_engine/        # C++ graph engine
+├── visualizer/        # HTML, CSS, JavaScript frontend
+├── data/              # Sample graph data and configuration
+├── docs/              # Project documentation (this file)
+├── run.sh             # Script to build C++ and run backend
+└── pyproject.toml     # Python project configuration
+``` 
 
 ## Technologies Used
 
